@@ -23,6 +23,9 @@ class Player(pygame.sprite.Sprite):
 
 
 
+    def  get_rect(self):
+        return pygame.Rect(self.x, self.y, self.width, self.height)
+
     def key_input(self):
 
         keys = pygame.key.get_pressed()
@@ -35,6 +38,3 @@ class Player(pygame.sprite.Sprite):
         if keys[pygame.K_DOWN]:
             if self.rect.bottom < GAME_HEIGHT:
                 self.rect.y += self.speed
-
-    def  get_rect(self):
-        return pygame.Rect(self.x, self.y, self.width, self.height)
